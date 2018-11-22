@@ -1,0 +1,21 @@
+create table course(
+	course_id number primary key,
+	title varchar2(25)
+);
+
+
+create table registration(
+	reg_id number primary key,
+	student_name varchar2(25),
+	phone number(10),
+	course_id number references course(course_id)
+);
+
+create sequence seq_reg_id start with 1000;
+
+
+
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+drop table table_name cascade constraints;
