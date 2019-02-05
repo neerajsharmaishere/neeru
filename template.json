@@ -582,7 +582,7 @@
                 "VpcId": {
                     "Ref": "VPC"
                 },
-                "AvailabilityZone": "ap-south-1a",
+                "AvailabilityZone": "ap-south-1b",
                 "CidrBlock": "10.10.2.0/24",
                 "Tags": [
                     {
@@ -629,22 +629,22 @@
             "Properties": {
                 "AllocatedStorage": "20",
                 "DBInstanceClass": "db.t2.micro",
-                "AllowedMajorVersionUpgrade": "false",
+                "AllowMajorVersionUpgrade": "false",
                 "AutoMinorVersionUpgrade": "false",
                 "BackupRetentionPeriod": "7",
                 "DBInstanceIdentifier": "DBInstance",
                 "DBName": "MYSQLDB",
-                "DBSecurityGroups": {},
+                
                 "DBSubnetGroupName": {
                     "Ref": "RDSDBSubnetGroup"
                 },
                 "Engine": "MySQL",
-                "EngineVersion": "5.6.13",
+                "EngineVersion": "5.6.40",
                 "MasterUsername": "neeraj",
                 "MasterUserPassword": "password",
                 "MultiAZ": "false",
                 "Port": "3306",
-                "PublicAccessible": "true",
+                "PubliclyAccessible": "false",
                 "StorageType": "gp2",
                 "Tags": [
                     {
@@ -735,7 +735,9 @@
         "SubnetRouteTableAssociation": {
             "Type": "AWS::EC2::SubnetRouteTableAssociation",
             "Properties": {
-                "SubnetId":  {"Ref": "PublicSubnet"}, 
+                "SubnetId": {
+                    "Ref": "PublicSubnet"
+                },
                 "RouteTableId": {
                     "Ref": "RouteTable"
                 }
@@ -1206,7 +1208,8 @@
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "984ea848-b43e-473f-a4fd-29d769087d10",
                     "37ae071c-77c8-4dbb-91b6-a3ecc7d6d7ea",
-                    "7dbbfaec-7220-46b7-9c27-a13bc84e8ed3"
+                    "7dbbfaec-7220-46b7-9c27-a13bc84e8ed3",
+                    "04439717-c782-4455-8e9f-aab10ecb5d6d"
                 ]
             },
             "94a3c6f5-25d9-4d86-8abe-4667570d9e3b": {
@@ -1222,6 +1225,7 @@
                 "parent": "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                 "embeds": [],
                 "iscontainedinside": [
+                    "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a"
                 ]
@@ -1247,6 +1251,7 @@
                 ],
                 "iscontainedinside": [
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
+                    "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a"
                 ]
             },
@@ -1263,6 +1268,7 @@
                 "parent": "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                 "embeds": [],
                 "iscontainedinside": [
+                    "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36"
                 ]
@@ -1281,6 +1287,7 @@
                 "embeds": [],
                 "iscontainedinside": [
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
+                    "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36"
                 ]
             },
@@ -1297,6 +1304,7 @@
                 "parent": "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                 "embeds": [],
                 "iscontainedinside": [
+                    "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36"
                 ]
@@ -1315,6 +1323,7 @@
                 "embeds": [],
                 "iscontainedinside": [
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
+                    "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36"
                 ]
             },
@@ -1332,6 +1341,7 @@
                 "embeds": [],
                 "iscontainedinside": [
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
+                    "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36"
                 ]
             },
@@ -1348,6 +1358,7 @@
                 "parent": "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                 "embeds": [],
                 "iscontainedinside": [
+                    "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36",
                     "850e81e8-39e0-4b14-92d3-3b7ed40abf36"
                 ]
@@ -1367,6 +1378,7 @@
                     "eac6d924-9f7f-4a30-b713-04a9e3e84275"
                 ],
                 "iscontainedinside": [
+                    "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a"
                 ]
@@ -1397,6 +1409,7 @@
                 ],
                 "iscontainedinside": [
                     "984ea848-b43e-473f-a4fd-29d769087d10",
+                    "984ea848-b43e-473f-a4fd-29d769087d10",
                     "984ea848-b43e-473f-a4fd-29d769087d10"
                 ],
                 "dependson": [
@@ -1417,6 +1430,7 @@
                 "embeds": [],
                 "iscontainedinside": [
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
+                    "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a"
                 ]
             },
@@ -1436,6 +1450,7 @@
                 ],
                 "iscontainedinside": [
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
+                    "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
                     "5fde6382-17b6-4c0a-887d-b88ddf70aa5a"
                 ]
             },
@@ -1452,6 +1467,7 @@
                 "parent": "7dbbfaec-7220-46b7-9c27-a13bc84e8ed3",
                 "embeds": [],
                 "iscontainedinside": [
+                    "7dbbfaec-7220-46b7-9c27-a13bc84e8ed3",
                     "7dbbfaec-7220-46b7-9c27-a13bc84e8ed3",
                     "7dbbfaec-7220-46b7-9c27-a13bc84e8ed3"
                 ],
@@ -1526,7 +1542,23 @@
                 "parent": "862e1a90-5475-4060-9717-85b1a054d2b3",
                 "embeds": [],
                 "iscontainedinside": [
+                    "862e1a90-5475-4060-9717-85b1a054d2b3",
                     "862e1a90-5475-4060-9717-85b1a054d2b3"
+                ]
+            },
+            "04439717-c782-4455-8e9f-aab10ecb5d6d": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 760,
+                    "y": 360
+                },
+                "z": 2,
+                "parent": "5fde6382-17b6-4c0a-887d-b88ddf70aa5a",
+                "iscontainedinside": [
+                    "5fde6382-17b6-4c0a-887d-b88ddf70aa5a"
                 ]
             }
         }
